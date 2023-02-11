@@ -1,0 +1,100 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+        .style9 {color: #FFFF00}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div>
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">View Product Recommendation Prediction Details  !!! </p>
+                            <hr>
+                            <div >
+                               <table border="5" bordercolor="#FF00FF">
+
+                               <tr><td bgcolor="#FF0000"><span class="style8 style6">Idno</span></td>
+                                <td bgcolor="#FF0000"><span class="style8 style6">ProductId</span></td>
+                                <td bgcolor="#FF0000"><span class="style8 style6">UserId</span></td>
+                                <td bgcolor="#FF0000"><span class="style8 style6">ProfileName</span></td>
+                                <td bgcolor="#FF0000"><span class="style8 style6">HelpfulnessNumerator</span></td>
+                                <td bgcolor="#FF0000"><span class="style8 style6">HelpfulnessDenominator</span></td>
+                                <td bgcolor="#FF0000"><span class="style8 style6">Score</span></td>
+                                <td bgcolor="#FF0000"><span class="style8 style6">Time</span></td>
+                                <td bgcolor="#FF0000"><span class="style8 style6">Summary</span></td>
+                                <td bgcolor="#FF0000"><span class="style8 style6">Review</span></td>
+                                   <td bgcolor="#FF0000"><span class="style8 style6">Recommend Prediction</span></td>
+                                  </tr>
+                            {% for object in list_objects %}
+                      <tr>
+                          <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.idno}}</div></td>
+                          <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.ProductId}}</div></td>
+                          <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.UserId}}</div></td>
+                          <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.ProfileName}}</div></td>
+                          <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.HelpfulnessNumerator}}</div></td>
+                          <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.HelpfulnessDenominator}}</div></td>
+                          <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Score}}</div></td>
+                          <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Time}}</div></td>
+                          <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Summary}}</div></td>
+                          <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Review}}</div></td>
+                           <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Recommend_Prediction}}</div></td>
+
+
+                        </tr>
+
+                                        {% endfor %}
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

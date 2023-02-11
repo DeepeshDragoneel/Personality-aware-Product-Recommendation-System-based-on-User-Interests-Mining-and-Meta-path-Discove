@@ -1,0 +1,57 @@
+Personality-aware Product Recommendation System based on User Interests Mining and Meta-path Discovery
+
+
+IEEE Transactions on Computational Social Systems,Volume:8,Issue:1,Issue Date:Feb.2021
+
+Personality_aware_Product_Recommendation
+
+
+personality_aware_product_recommendation
+
+
+
+
+social networks, recommendation system, product
+recommendation, user interest mining, personality computing,
+big-five model, social computing, user modeling
+
+
+
+Product_Details
+
+idno
+ProductId
+UserId
+ProfileName
+HelpfulnessNumerator
+HelpfulnessDenominator
+Score
+Time
+Summary
+Review
+
+
+Product_Recommended
+
+idno
+ProductId
+UserId
+ProfileName
+HelpfulnessNumerator
+HelpfulnessDenominator
+Score
+Time
+Summary
+Review
+Recommend_Prediction
+
+Product_Details,Recommend_Prediction,detection_ratio,detection_accuracy
+
+
+
+Recommend
+
+No Recommend
+
+
+
